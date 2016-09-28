@@ -1,0 +1,12 @@
+doctype html
+html(lang='es')
+	head
+	title = title
+	body
+		h1 Resgistro de Documento
+		form(method='POST', action='/registro')
+			label(for='email') Email:
+			input#email(type='email', name='email', placeholder='email')
+			label(for='password') Password:
+			input#password(type='password', name='password', placeholder='password')
+			input(type='submit', value='Enviar')

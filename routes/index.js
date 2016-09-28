@@ -2,6 +2,11 @@ var express = require('express');
 var User = require('../modelos/user').User
 
 var router = express.Router();
+var stormpath = require('express-stormpath');
+
+router.use(stormpath.init(router),function({
+	
+}))
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

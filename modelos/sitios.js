@@ -19,5 +19,5 @@ var sitios_schema = new Schema({
 	imgurl: String
 })
 
-var User = mongoose.model('Sitios',sitios_schema)
-module.exports.User = User
+var Sitios = mongoose.model('Sitios',sitios_schema)
+module.exports.Sitios = Sitios

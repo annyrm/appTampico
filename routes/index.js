@@ -27,8 +27,15 @@ router.get('/registro', function(req, res, next){
 
 router.post('/registro', function(req, res, next){
 	var user = new User({
-		email: req.body.email,
-		password: req.body.password
+		idsitio: req.body.idsitio,
+		nombre: req.body.nombre,
+		descripcion: req.body.descripcion,
+		latitud: req.body.latitud,
+		longitud: req.body.longitud,
+		tipo: req.body.tipo,
+		ciudad: req.body.tipo,
+		direccion: req.body.direccion,
+		imgurl: req.body.imgurl
 	})
 	user.save().then(function(err){
 		if (err) {console.log(err)}

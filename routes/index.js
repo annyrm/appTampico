@@ -28,7 +28,7 @@ router.get('/api1',function(req, res,next){
 })
 
 router.get('/api2/:id',function(req, res,next){
-	User.findOne({},{nombre:1, descripcion:1, imgurl:1},function(err,docs){
+	User.findOne({},{_id:req.params.id},{nombre:1, descripcion:1, imgurl:1},function(err,docs){
 		res.send(docs)
 	})
 })

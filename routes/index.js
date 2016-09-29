@@ -21,6 +21,12 @@ router.get('/api/:id',function(req, res,next){
 	})
 })
 
+router.get('/api/menu',function(req, res,next){
+	User.findOne({nombre:1, latitud:1, longitud:1},function(err,docs){
+		res.send(docs)
+	})
+})
+
 router.get('/registro', function(req, res, next){
 	res.render('new',{title: 'Registro de Nuevo'})
 })

@@ -7,7 +7,6 @@ mongoose.connect(mongoURL, function(err){
 })
 
 var user_schema = new Schema({
-	idsitio: String,
 	nombre: String,
 	descripcion: String,
 	latitud: String,

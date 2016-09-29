@@ -7,8 +7,16 @@ mongoose.connect(mongoURL, function(err){
 })
 
 var user_schema = new Schema({
-	email: String,
-	password: String
+	idsitio: String,
+	nombre: String,
+	descripcion: String,
+	latitud: String,
+	longitud: String,
+	tipo: String, 
+	ciudad: String,
+	servicios: String, 
+	direccion: String,
+	imgurl: String
 })
 
 var User = mongoose.model('User',user_schema)

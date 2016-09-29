@@ -57,7 +57,7 @@ router.post('/registro', function(req, res, next){
 		latitud: req.body.latitud,
 		longitud: req.body.longitud,
 		tipo: req.body.tipo,
-		ciudad: req.body.tipo,
+		ciudad: req.body.ciudad,
 		direccion: req.body.direccion,
 		imgurl: req.body.imgurl
 	})

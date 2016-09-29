@@ -31,6 +31,13 @@ router.get('/registro', function(req, res, next){
 	res.render('new',{title: 'Registro de Nuevo'})
 })
 
+router.get('/delete/:id', function(req, res, next){
+	User.findOneAndRemove({_id:req.params.id},function(error,doc){
+		if (err) {console.log(err)}
+			res.redirect('/api')
+	})
+})
+
 router.post('/registro', function(req, res, next){
 	var user = new User({
 		nombre: req.body.nombre,

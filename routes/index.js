@@ -32,7 +32,7 @@ router.get('/registro', function(req, res, next){
 })
 
 router.get('/delete/:id', function(req, res, next){
-	User.findOneAndRemove({_id:req.params.id},function(error,doc){
+	User.findOneAndRemove({_id:req.params.id},function(err,docs){
 		if (err) {console.log(err)}
 			res.redirect('/api')
 	})

@@ -37,27 +37,5 @@ router.post('/registro', function(req, res, next){
 	})
 })
 
-router.get('/data', function(req, res, next){
-	res.render('new',{title: 'Registro de Datos'})
-})
-
-router.post('/data', function(req, res, next){
-	var sitios = new Sitios({
-		idsitio: req.body.idsitio,
-		nombre: req.body.nombre,
-		descripcion: req.body.descripcion,
-		latitud:. req.body.latitud,
-		longitud: req.body.longitud,
-		tipo: req.body.tipo,
-		ciudad: req.body.ciudad,
-		servicios: req.body.servicios,
-		direccion: req.body.direccion,
-		imgurl: req.body.imgurl
-	})
-	sitios.save().then(function(err){
-		if (err) {console.log(err)}
-			res.redirect('/api')
-	})
-})
 
 module.exports = router;

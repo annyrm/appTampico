@@ -33,7 +33,6 @@ router.get('/registro', function(req, res, next){
 
 router.post('/registro', function(req, res, next){
 	var user = new User({
-		idsitio: req.body.idsitio,
 		nombre: req.body.nombre,
 		descripcion: req.body.descripcion,
 		latitud: req.body.latitud,

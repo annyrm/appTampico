@@ -22,7 +22,7 @@ router.get('/api/:id',function(req, res,next){
 })
 
 router.get('/api1',function(req, res,next){
-	User.findOne({},{nombre:1, latitud:1, longitud:1},function(err,docs){
+	User.findOne({},{nombre, latitud, longitud},function(err,docs){
 		res.send(docs)
 	})
 })

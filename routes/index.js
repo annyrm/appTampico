@@ -27,8 +27,8 @@ router.get('/api1',function(req, res,next){
 	})
 })
 
-router.get('/api2',function(req, res,next){
-	User.find({},{nombre:1, descripcion:1, imgurl:1},function(err,docs){
+router.get('/api2/:id',function(req, res,next){
+	User.findOne({},{nombre:1, descripcion:1, imgurl:1},function(err,docs){
 		res.send(docs)
 	})
 })

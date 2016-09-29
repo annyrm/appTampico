@@ -27,6 +27,12 @@ router.get('/api1',function(req, res,next){
 	})
 })
 
+router.get('/api2',function(req, res,next){
+	User.find({},{nombre:1, descripcion:1, imgurl:1},function(err,docs){
+		res.send(docs)
+	})
+})
+
 router.get('/registro', function(req, res, next){
 	res.render('new',{title: 'Registro de Nuevo'})
 })

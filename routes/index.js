@@ -34,7 +34,7 @@ router.get('/api2/:id',function(req, res,next){
 })
 
 router.get('/api3',function(req, res,next){
-	User.find({},{nombre:1},function(err,docs){
+	User.find({},{nombre:1, ciudad:1},function(err,docs){
 		res.send(docs)
 	})
 })

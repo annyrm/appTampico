@@ -1,6 +1,5 @@
 var express = require('express');
 var User = require('../modelos/user').User
-var Sitios = require('../modelos/sitios').Sitios
 
 var router = express.Router();
 

@@ -76,7 +76,7 @@ router.post('/registroUsuario', function(req, res, next){
 	var usuarios = new Usuario({
 		mail: req.body.mail,
 		usern: req.body.usern,
-		contrasena: req.contrasena.latitud
+		contrasena: req.body.contrasena
 	})
 	user.save().then(function(err){
 		if (err) {console.log(err)}

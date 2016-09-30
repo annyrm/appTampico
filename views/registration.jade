@@ -1,0 +1,21 @@
+doctype html
+html(lang='es')
+	head
+	title = title
+	body
+		h1 Registro de Usuarios
+		form(method='POST', action='/registro')
+			label(for='mail') Email: 
+			input#email(type='email', name='mail', placeholder='mail')
+			<br>
+			<br>
+			label(for='usern') Nombre de Usuario: 
+			input#usern(type='text', name='usern', placeholder='usern')
+			<br>
+			<br>
+			label(for='contrasena') Descripcion: 
+			input#contrasena(type='password', name='contrasena', placeholder='contrasena')
+			<br>
+			<br>
+			<br>
+			input(type='submit', value='Enviar')

@@ -1,5 +1,6 @@
 var express = require('express');
 var User = require('../modelos/user').User
+var Usuario = require('../modelos/usuarios').Usuario
 
 var router = express.Router();
 
@@ -64,6 +65,22 @@ router.post('/registro', function(req, res, next){
 	user.save().then(function(err){
 		if (err) {console.log(err)}
 			res.redirect('/api')
+	})
+})
+
+router.get('/registroUsuario', function(req, res, next){
+	res.render('new',{title: 'Registro de Nuevo'})
+})
+
+router.post('/registroUsuario', function(req, res, next){
+	var usuarios = new Usuario({
+		mail: req.body.mail,
+		usern: req.body.usern,
+		contrasena: req.contrasena.latitud
+	})
+	user.save().then(function(err){
+		if (err) {console.log(err)}
+			res.redirect('/registro')
 	})
 })
 
